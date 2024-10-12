@@ -26,9 +26,9 @@ public class ProjectQuiz2 {
             System.out.println("\nYou must play three numbers at a time.");
             System.out.println("The valid numbers are between 0 and 20 inclusive");
 
-            int guess1 = guess(sc, "Enter your number? ");                                               // calls user input to play the game method to ger user betting number 
-            int guess2 = guess(sc, "Enter your number? ");
-            int guess3 = guess(sc, "Enter your number? ");
+            int guess1 = getUserGuess(sc, "Enter your number? ");                                               // calls user input to play the game method to ger user betting number 
+            int guess2 = getUserGuess(sc, "Enter your number? ");
+            int guess3 = getUserGuess(sc, "Enter your number? ");
 
             double bet = getWager(sc, "How much do you wager? ", tableMoney);                           //calls wage validation and input method to ger user wagers
 
@@ -86,7 +86,7 @@ public class ProjectQuiz2 {
 
     }
 
-    public static int guess(Scanner sc, String prompt) {                        //user input static method to play the game
+    public static int getUserguess(Scanner sc, String prompt) {                        //user input static method to play the game
 
         boolean isValid = false;
         int guess = 0;
